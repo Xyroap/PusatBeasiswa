@@ -42,7 +42,7 @@
         <div class="container">
             <div class="hero-content">
                 <h1 class="hero-title">
-                    Bring Education To The World
+                    Temukan Beasiswa Impianmu
                 </h1>
                 <p class="hero-description">
                     bring education to every corner of the world, empowering underprivileged communities
@@ -56,7 +56,7 @@
     </section>
 
     <section id="journey">
-        <img src="bg2_kiri.png" alt="Background decoration" class="journey-bg">
+        <img src="bg2_atas.png" alt="Background decoration" class="journey-bg">
 
         <div class="journey-container">
             <div class="journey-content">
@@ -76,8 +76,7 @@
     </section>
 
     <section id="about">
-        <img src="bg3_kiri.png" alt="Background decoration" class="about-bg-left">
-        <img src="bg3_kanan.png" alt="Background decoration" class="about-bg-right">
+        <img src="bg3.png" alt="Background decoration" class="about-bg">
         
         <div class="about-container">
             <div class="about-title">
