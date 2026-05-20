@@ -12,10 +12,7 @@
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
-           
-            <div class="logo">
-                <img src="" alt="Logo">
+                {{-- kalo mau naro logo disini --}}
             </div>
         </div>
        
@@ -97,6 +94,6 @@
         </div>
     </section>
 
-    <script src="script.js"></script>
+    <script src="{{ asset('js/script.js')}}"></script>
 </body>
 </html>
