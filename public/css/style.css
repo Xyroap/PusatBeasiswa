@@ -481,6 +481,7 @@ section {
 
 .about-content h2 {
     font-weight: normal;
+    text-align: justify;
     justify-content: center;
     font-size: 5;
     color: #666;

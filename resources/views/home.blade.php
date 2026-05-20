@@ -20,24 +20,24 @@
         </div>
        
         <nav id="desktop-nav">
-            <a href="login.html">Home</a>
-            <a href="login.html">Artikel</a>
+            <a href="#">Home</a>
+            <a href="#">Artikel</a>
             <a href="#workshop">Workshop</a>
-            <a href="login.html">Beasiswa</a>
-            <a href="login.html" class="about-btn">Login</a>
+            <a href="#">Beasiswa</a>
+            <a href="#" class="about-btn">Login</a>
         </nav>
 
         <div class="mobile-nav" id="mobile-nav">
-            <a href="login.html" class="mobile-menu-item">Home</a>
-            <a href="login.html" class="mobile-menu-item">Artikel</a>
+            <a href="#" class="mobile-menu-item">Home</a>
+            <a href="#" class="mobile-menu-item">Artikel</a>
             <a href="#workshop" class="mobile-menu-item">Workshop</a>
             <a href="#about" class="mobile-menu-item">About Us</a>
-            <a href="login.html" class="mobile-menu-item">Login</a>
+            <a href="#" class="mobile-menu-item">Login</a>
         </div>
     </header>
 
     <section id="home" class="hero">
-        <img src="bg_atas1.png" alt="Background decoration" class="home-bg-up">
+        <img src="{{ asset('bg_atas1.png')}}" alt="Background decoration" class="home-bg-up">
        
         <div class="container">
             <div class="hero-content">
@@ -52,11 +52,11 @@
             </div>
         </div>
 
-        <img src="bg_bawah1.png" alt="Background decoration" class="home-bg-down">
+        <img src="{{ asset('bg_bawah1.png')}}" alt="Background decoration" class="home-bg-down">
     </section>
 
     <section id="journey">
-        <img src="bg2_atas.png" alt="Background decoration" class="journey-bg">
+        <img src="{{ asset('bg2_atas.png')}}" alt="Background decoration" class="journey-bg">
 
         <div class="journey-container">
             <div class="journey-content">
@@ -64,19 +64,19 @@
                 <p class="journey-description">
                     Start learning today and be part of a global movement that believes education should belong to everyone, everywhere. Whether you're chasing dreams, building skills, or seeking new opportunities, this is your chance to grow, connect, and create a brighter future through learning
                 </p>
-                <a href="login.html" class="journey-btn">Start Your Journey</a>
+                <a href="#" class="journey-btn">Start Your Journey</a>
             </div>
             
             <div class="portrait-section">
                 <div class="portrait-container">
-                    <img src="Teaching2.png" alt="Student studying">
+                    <img src="{{ asset('Teaching2.png')}}" alt="Student studying">
                 </div>
             </div>
         </div>
     </section>
 
     <section id="about">
-        <img src="bg3.png" alt="Background decoration" class="about-bg">
+        <img src="{{ asset('bg3.png')}}" alt="Background decoration" class="about-bg">
         
         <div class="about-container">
             <div class="about-title">
