@@ -21,7 +21,8 @@
             <a href="#">Artikel</a>
             <a href="#workshop">Workshop</a>
             <a href="#">Beasiswa</a>
-            <a href="#" class="about-btn">Login</a>
+            <a href="{{ route('login')}}" class="about-btn">Login</a>
+            <a href="{{ route('register')}}" class="about-btn">Register</a>
         </nav>
 
         <div class="mobile-nav" id="mobile-nav">
@@ -29,7 +30,8 @@
             <a href="#" class="mobile-menu-item">Artikel</a>
             <a href="#workshop" class="mobile-menu-item">Workshop</a>
             <a href="#about" class="mobile-menu-item">About Us</a>
-            <a href="#" class="mobile-menu-item">Login</a>
+            <a href="{{ route('login')}}" class="mobile-menu-item">Login</a>
+            <a href="{{ route('register')}}" class="mobile-menu-item">Register</a>
         </div>
     </header>
 
