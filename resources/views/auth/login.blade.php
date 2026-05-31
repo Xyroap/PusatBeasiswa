@@ -100,7 +100,7 @@
             </div>
         </div>
 
-        <div class="right-section" id="rightImage" style="background-image: url('{{ asset('login.png') }}');">
+        <div class="right-section" id="rightImage" style="background-image: url('{{ asset('images/login.png') }}');">
         </div>
     </div>
 

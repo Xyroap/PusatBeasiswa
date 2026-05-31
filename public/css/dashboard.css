@@ -47,6 +47,7 @@ body {
     font-size: 11px;
     color: #9ca3af;
     padding: 0 12px;
+    margin-top: 30px;
     margin-bottom: 12px;
     font-weight: 600;
 }
@@ -199,7 +200,7 @@ body {
     border-radius: 24px;
     padding: 48px;
     margin-bottom: 32px;
-    width: 900px;
+    width: 1365px;
     position: relative;
     overflow: hidden;
     color: white;
@@ -250,6 +251,7 @@ body {
 }
 
 .hero-btn {
+    text-decoration: none;
     background: #000;
     color: white;
     padding: 14px 32px;
@@ -287,6 +289,11 @@ body {
     overflow: hidden;
     box-shadow: 0 2px 8px rgba(0,0,0,0.06);
     transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.dashboard-card-link {
+    text-decoration: none;
+    color: inherit;
 }
 
 .dashboard-card:hover {
@@ -359,49 +366,6 @@ body {
 .author-name {
     font-weight: 600;
     color: #111827;
-}
-
-.donation-cards {
-    position: absolute;
-    top: 30px;
-    right: 32px;
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-}
-
-.donation-card {
-    background: linear-gradient(135deg, #6b7280, #4b5563);
-    color: white;
-    padding: 20px;
-    border-radius: 16px;
-    width: 220px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-
-.donation-label {
-    font-size: 12px;
-    opacity: 0.9;
-    margin-bottom: 8px;
-}
-
-.donation-amount {
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 4px;
-}
-
-.donation-change {
-    font-size: 12px;
-    opacity: 0.8;
-}
-
-.donation-change.up::before {
-    content: '↑ ';
-}
-
-.donation-change.down::before {
-    content: '↓ ';
 }
 
 @media (max-width: 1400px) {

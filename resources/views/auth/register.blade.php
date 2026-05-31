@@ -146,7 +146,7 @@
             </div>
         </div>
 
-        <div class="right-section" id="rightImage" style="background-image: url('{{ asset('register.png')}}');">
+        <div class="right-section" id="rightImage" style="background-image: url('{{ asset('images/register.png')}}');">
         </div>
     </div>
 

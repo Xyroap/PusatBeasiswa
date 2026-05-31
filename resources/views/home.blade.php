@@ -36,7 +36,7 @@
     </header>
 
     <section id="home" class="hero">
-        <img src="{{ asset('bg_atas1.png')}}" alt="Background decoration" class="home-bg-up">
+        <img src="{{ asset('images/bg_atas1.png')}}" alt="Background decoration" class="home-bg-up">
        
         <div class="container">
             <div class="hero-content">
@@ -51,11 +51,11 @@
             </div>
         </div>
 
-        <img src="{{ asset('bg_bawah1.png')}}" alt="Background decoration" class="home-bg-down">
+        <img src="{{ asset('images/bg_bawah1.png')}}" alt="Background decoration" class="home-bg-down">
     </section>
 
     <section id="journey">
-        <img src="{{ asset('bg2_atas.png')}}" alt="Background decoration" class="journey-bg">
+        <img src="{{ asset('images/bg2_atas.png')}}" alt="Background decoration" class="journey-bg">
 
         <div class="journey-container">
             <div class="journey-content">
@@ -68,14 +68,14 @@
             
             <div class="portrait-section">
                 <div class="portrait-container">
-                    <img src="{{ asset('Teaching2.png')}}" alt="Student studying">
+                    <img src="{{ asset('images/Teaching2.png')}}" alt="Student studying">
                 </div>
             </div>
         </div>
     </section>
 
     <section id="about">
-        <img src="{{ asset('bg3.png')}}" alt="Background decoration" class="about-bg">
+        <img src="{{ asset('images/bg3.png')}}" alt="Background decoration" class="about-bg">
         
         <div class="about-container">
             <div class="about-title">
