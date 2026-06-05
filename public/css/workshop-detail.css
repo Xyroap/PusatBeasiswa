@@ -1,0 +1,180 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-nav: #1a1a1a;
+  --bg-body: #f2f2f0;
+  --text-primary: #111;
+  --text-muted: #555;
+  --white: #fff;
+  --nav-h: 72px;
+}
+
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  background-color: var(--bg-body);
+  color: var(--text-primary);
+  min-height: 100vh;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--bg-nav);
+  height: var(--nav-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 28px;
+}
+
+.nav-back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.nav-back:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.nav-back svg {
+  display: block;
+}
+
+.nav-divider {
+  width: 1px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.nav-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #ccc;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.nav-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nav-name {
+  color: var(--white);
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 48px 24px 80px;
+}
+
+.hero-wrap {
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.13);
+  margin-bottom: 32px;
+  aspect-ratio: 16 / 9;
+  background: #ccc;
+  animation: fadeUp 0.6s ease both;
+}
+
+.hero-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+h1 {
+  font-size: clamp(28px, 5vw, 48px);
+  font-weight: 800;
+  text-align: center;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+  color: var(--text-primary);
+  margin-bottom: 36px;
+  animation: fadeUp 0.6s 0.1s ease both;
+}
+
+/* ── INFO SECTION ── */
+.info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  animation: fadeUp 0.6s 0.2s ease both;
+}
+
+.info-label {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-top: 16px;
+}
+
+.info-label:first-child {
+  margin-top: 0;
+}
+
+.info-value {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* Description paragraph */
+.info-description {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--text-primary);
+  line-height: 1.8;
+  margin-top: 4px;
+}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 480px) {
+  nav {
+    padding: 0 16px;
+  }
+
+  .container {
+    padding: 28px 16px 60px;
+  }
+}

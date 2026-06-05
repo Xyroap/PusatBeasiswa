@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PusatBeasiswa Dashboard</title>
-    <link rel="stylesheet" href=" {{ asset('css/dashboard.css')}}">
+    <title>PusatBeasiswa Scholarship</title>
+    <link rel="stylesheet" href="{{ asset('css/application-form.css')}}">
 </head>
 <body>
     <div class="container">
-        <!-- Sidebar -->
         <div class="sidebar">
 
             <div class="menu-section">
@@ -62,71 +61,76 @@
         </div>
 
         <div class="main-content">
-            <div class="header">
-                <div class="search-bar">
-                    <svg class="search-icon" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
-                    </svg>
-                    <input type="text" placeholder="Search your course....">
-                </div>
-                <div class="header-right">
-                    <div class="user-profile">
-                        <div class="user-avatar"></div>
-                        <div class="user-name">
-                            {{ Auth::user()->name }}
+            <div class="applier-wrapper">
+                <div class="applier-card">
+
+                    <div class="applier-header">
+                        <h1 class="applier-title">Scholarship Applier</h1>
+                        <p class="applier-subtitle">Easy way to apply your scholarship</p>
+                    </div>
+
+                    @if ($errors->any())
+                        <div class="alert-error">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
                         </div>
-                    </div>
-                </div>
-            </div>
+                    @endif
 
-            <div class="content">
+                    <form method="POST" action="{{ route('application.store', $scholarship->id) }}" enctype="multipart/form-data">
+                        @csrf
 
-                <div class="hero-banner">
-                    <div class="hero-content">
-                        <div class="hero-label">ONLINE WORKSHOP</div>
-                        <h1 class="hero-title">Sharpen Your Skills with<br>Professional Online Workshop</h1>
-                        <a href="{{ route('workshop')}}" class="hero-btn">
-                            Join now
-                            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" class="input-full" value="{{ old('name') }}" required>
+                        </div>
 
-                <h2 class="section-title">Trending</h2>
-                <div class="dashboards-grid">
-                    @foreach ($articles as $article)
-                        <a href="{{ route('article.show', $article) }}" class="dashboard-card-link">
-                            <div class="dashboard-card">
-                                <div class="dashboard-image" style="background-image: url('{{ asset('images/' . $article->image) }}');">
+                        <div class="form-group">
+                            <label for="gpa">GPA</label>
+                            <input type="number" id="gpa" name="gpa" class="input-small" step="0.01" min="0" max="4" value="{{ old('gpa') }}" required>
+                        </div>
 
-                                </div>
+                        <div class="form-group">
+                            <label for="major">Major</label>
+                            <input type="text" id="major" name="major" class="input-full" value="{{ old('major') }}" required>
+                        </div>
 
-                                <div class="dashboard-content">
-                                    <h3 class="dashboard-title">
-                                        {{ $article->title }}
-                                    </h3>
+                        <div class="form-group">
+                            <label for="education_level">Education Level</label>
+                            <select id="education_level" name="education_level" class="input-small select-input" required>
+                                <option value="" disabled selected></option>
+                                <option value="D3">D3</option>
+                                <option value="S1">S1</option>
+                                <option value="S2">S2</option>
+                                <option value="S3">S3</option>
+                            </select>
+                        </div>
 
-                                    <div class="read-more">
-                                        Read More
-                                    </div>
+                        <div class="form-group">
+                            <label for="toefl_score">TOEFL Score (Optional)</label>
+                            <input type="number" id="toefl_score" name="toefl_score" class="input-small" min="0" max="677" value="{{ old('toefl_score') }}">
+                        </div>
 
-                                    <div class="author">
-                                        <div class="author-avatar"></div>
-                                        <div class="author-name">
-                                            {{ $article->author }}
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    @endforeach
+                        <div class="form-group">
+                            <label for="organization_experience">Organization Experience</label>
+                            <input type="text" id="organization_experience" name="organization_experience" class="input-full" value="{{ old('organization_experience') }}" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cv">CV</label>
+                            <input type="file" id="cv" name="cv" class="input-small input-file" accept=".pdf,.doc,.docx">
+                            <small>Maximum file size: 2 MB</small>
+                        </div>
+
+                        <div class="form-submit">
+                            <button type="submit" class="btn-submit">Submit</button>
+                        </div>
+
+                    </form>
                 </div>
             </div>
         </div>
-    </div>
-
-    <script src="{{ asset('js/dashboard.js')}}"></script>
 </body>
 </html>

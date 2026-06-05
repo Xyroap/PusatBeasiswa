@@ -18,16 +18,16 @@
        
         <nav id="desktop-nav">
             <a href="#">Home</a>
-            <a href="#">Artikel</a>
+            <a href="#">Article</a>
             <a href="#workshop">Workshop</a>
-            <a href="#">Beasiswa</a>
+            <a href="#">Scholarship</a>
             <a href="{{ route('login')}}" class="about-btn">Login</a>
             <a href="{{ route('register')}}" class="about-btn">Register</a>
         </nav>
 
         <div class="mobile-nav" id="mobile-nav">
             <a href="#" class="mobile-menu-item">Home</a>
-            <a href="#" class="mobile-menu-item">Artikel</a>
+            <a href="#" class="mobile-menu-item">Article</a>
             <a href="#workshop" class="mobile-menu-item">Workshop</a>
             <a href="#about" class="mobile-menu-item">About Us</a>
             <a href="{{ route('login')}}" class="mobile-menu-item">Login</a>
@@ -41,7 +41,7 @@
         <div class="container">
             <div class="hero-content">
                 <h1 class="hero-title">
-                    Temukan Beasiswa Impianmu
+                    Find Your Dream Scholarship
                 </h1>
                 <p class="hero-description">
                     bring education to every corner of the world, empowering underprivileged communities
@@ -59,11 +59,11 @@
 
         <div class="journey-container">
             <div class="journey-content">
-                <h1 class="journey-title">Come study with us</h1>
+                <h1 class="journey-title">Start Your Dream</h1>
                 <p class="journey-description">
-                    Start learning today and be part of a global movement that believes education should belong to everyone, everywhere. Whether you're chasing dreams, building skills, or seeking new opportunities, this is your chance to grow, connect, and create a brighter future through learning
+                    Embarking on your higher education journey is an exciting step, and securing the right scholarship can turn that ambition into reality. Through a seamless and intuitive platform, we break down the barriers to financial aid, ensuring you have the resources, guidance, and timely updates needed to unlock your potential. Your academic future starts here. let's make your dreams achievable, one opportunity at a time.
                 </p>
-                <a href="#" class="journey-btn">Start Your Journey</a>
+                <a href="{{route('login')}}" class="journey-btn">Start Your Journey</a>
             </div>
             
             <div class="portrait-section">
@@ -84,13 +84,7 @@
 
             <div class="about-content">
                 <h2>
-                    Kami adalah platform pencarian dan rekomendasi beasiswa berbasis AI yang hadir untuk membantu siswa dan mahasiswa menemukan peluang pendidikan yang sesuai dengan profil, kebutuhan, dan tujuan akademik mereka.
-                    
-                    Kami memahami bahwa informasi beasiswa sering kali tersebar di berbagai sumber, sulit diverifikasi, dan memerlukan waktu lama untuk disaring secara manual. Karena itu, kami membangun solusi yang menyediakan informasi beasiswa yang terstruktur, mudah diakses, dan dipersonalisasi.
-                    
-                    Dengan teknologi Artificial Intelligence, platform kami menawarkan fitur pencarian pintar, rekomendasi beasiswa personal, pengecekan kelayakan (eligibility checker), serta pengingat deadline agar pengguna dapat mempersiapkan diri dengan lebih baik.
-                    
-                    Misi kami adalah meningkatkan akses pendidikan, membantu pengguna menemukan peluang terbaik, dan mengurangi kesenjangan informasi dalam dunia beasiswa.
+                    We are a scholarship search and recommendation platform dedicated to helping students discover educational opportunities tailored to their profiles, needs, and academic goals. We understand that scholarship information is often scattered across various sources, difficult to verify, and time-consuming to filter manually. Therefore, we built a solution that provides structured, easily accessible, and personalized scholarship data. Through advanced matching technology, our platform offers smart search features, personalized recommendations, eligibility checkers, and deadline reminders to help users better prepare themselves. Our mission is to enhance access to education, help users find the best opportunities, and bridge the information gap in the scholarship ecosystem.
                 </h2>
             </div>
         </div>
