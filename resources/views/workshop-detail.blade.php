@@ -15,8 +15,6 @@
             </svg>
         </a>
 
-        <div class="nav-divider"></div>
-
         <div class="nav-user">
             <div class="nav-avatar"></div>
             <span class="nav-name">
@@ -35,13 +33,13 @@
         <!-- Info -->
         <div class="info-section">
 
-        <p class="info-label">Pembicara</p>
+        <p class="info-label">Speaker</p>
         <p class="info-value">{{ $workshop->speaker }}</p>
 
-        <p class="info-label">Tanggal</p>
+        <p class="info-label">Date</p>
         <p class="info-value">{{ \Carbon\Carbon::parse($workshop->event_date)->format('d F Y') }}</p>
 
-        <p class="info-label">Deskripsi</p>
+        <p class="info-label">Description</p>
         <p class="info-description">
             {{ $workshop->description }}
         </p>

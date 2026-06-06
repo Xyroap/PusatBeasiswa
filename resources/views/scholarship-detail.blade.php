@@ -15,8 +15,6 @@
             </svg>
         </a>
 
-        <div class="nav-divider"></div>
-
         <div class="nav-user">
             <div class="nav-avatar"></div>
             <span class="nav-name">

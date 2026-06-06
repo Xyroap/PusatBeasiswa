@@ -82,6 +82,8 @@ Route::middleware('auth')->group(function () {
     ->name('scholarship.show');
     Route::get('/articles', [ArticleController::class, 'index'])
     ->name('articles');
+    Route::get('/articles/{article}', [ArticleController::class, 'show'])
+    ->name('articles.show');
 });
 
 require __DIR__.'/auth.php';

@@ -98,18 +98,32 @@
             </div>
 
             <div class="articles-grid">
-                <div class="article-card">
-                    <div class="article-image" style="background-image: url('{{ asset('images/image 6.png')}}');">
-                    </div>
-                    <div class="article-content">
-                        <h3 class="article-title">Struggling to Learn with Limited Facilities</h3>
-                        <div class="read-more">Read More →</div>
-                        <div class="author">
-                            <div class="author-avatar" style="background: linear-gradient(135deg, #06b6d4, #3b82f6);"></div>
-                            <div class="author-name">Michael Anderson</div>
+                @foreach($articles as $article)
+                    <div class="article-card">
+
+                        <div class="article-image"
+                            style="background-image:url('{{ asset('images/' . $article->image) }}')">
+                        </div>
+
+                        <div class="article-content">
+                            <h3 class="article-title">
+                                {{ $article->title }}
+                            </h3>
+
+                            <a href="{{ route('articles.show', $article->id) }}" class="read-more">
+                                Read More →
+                            </a>
+
+                            <div class="author">
+                                <div class="author-avatar"></div>
+
+                                <div class="author-name">
+                                    {{ $article->author }}
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>
