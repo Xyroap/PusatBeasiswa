@@ -34,7 +34,7 @@
 
         <div class="info-section">
 
-            <p class="info-label">Penyelenggara</p>
+            <p class="info-label">Provider</p>
             <p class="info-value">
                 {{ $scholarship->provider }}
             </p>
@@ -44,7 +44,7 @@
                 {{ \Carbon\Carbon::parse($scholarship->deadline)->format('d F Y') }}
             </p>
 
-            <p class="info-label">Deskripsi</p>
+            <p class="info-label">Description</p>
             <p class="info-description">
                 {{ $scholarship->description }}
             </p>

@@ -8,7 +8,15 @@ class ArticleController extends Controller
 {
     public function dashboard()
     {
-        $articles = Article::where('is_featured', 1)->get();
+        $search = request('search');
+
+        $articles = Article::query()
+            ->where('is_featured', 1)
+            ->when($search, function ($query) use ($search) {
+                $query->where('title', 'like', "%{$search}%")
+                    ->orWhere('author', 'like', "%{$search}%");
+            })
+            ->get();
 
         return view('dashboard', compact('articles'));
     }
